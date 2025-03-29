@@ -18,7 +18,7 @@ const Hero = () => {
             className="absolute left-[15%] -top-[42%] z-10"
           />
         </div>
-        <div className="flex items-center text-center gap-5 flex-col">
+        <div className="flex items-center text-center gap-5 flex-col z-30">
           <h1 className="font-bold text-4xl max-w-96 text-primary-dark-blue">
             Bring everyone together to build better products.
           </h1>

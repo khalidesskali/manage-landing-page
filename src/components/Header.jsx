@@ -21,7 +21,7 @@ const Header = () => {
           </button>
         </div>
         {isOpen && (
-          <div className="fixed inset-0 bg-black opacity-20 z-100"></div>
+          <div className="fixed inset-0 bg-black opacity-20 z-80"></div>
         )}
         <nav
           className={`${

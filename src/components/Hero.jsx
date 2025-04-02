@@ -20,15 +20,15 @@ const Hero = () => {
         </div>
         <div
           className="flex items-center text-center gap-5 lg:gap-8 flex-col z-30
-          lg:-order-1 lg:text-start lg:items-start"
+          lg:-order-1 lg:text-start lg:items-start "
         >
           <h1
-            className="font-bold text-4xl lg:text-5xl 2xl:text-6xl max-w-96 text-primary-dark-blue 
+            className="font-bold text-4xl md:max-w-[600px] lg:text-5xl 2xl:text-6xl max-w-96 text-primary-dark-blue 
             lg:max-w-[550px] lg:leading-[1.2]"
           >
             Bring everyone together to build better products.
           </h1>
-          <p className="text-darkgrayish-blue font-light leading-[1.6] max-w-[320px] lg:max-w-[350px] mb-3">
+          <p className="text-darkgrayish-blue font-light leading-[1.6] max-w-[320px] md:max-w-[550px] lg:max-w-[350px] mb-3">
             Manage makes it simple for software teams to plan day-to-day tasks
             while keeping the larger team goals in view.
           </p>

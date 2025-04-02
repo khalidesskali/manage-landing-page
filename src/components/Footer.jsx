@@ -31,7 +31,7 @@ const Footer = () => {
                 Go
               </button>
             </div>
-            <p className="hidden text-sm mt-12 text-left text-darkgrayish-blue lg:block">
+            <p className="hidden text-sm mt-12 text-right text-darkgrayish-blue lg:block">
               copyright 2020. All rights reserved
             </p>
           </form>
@@ -52,29 +52,34 @@ const Footer = () => {
               <a href="">Privacy Policy</a>
             </div>
           </div>
-          <div className="mt-13 lg:mt-0 flex flex-col gap-15 items-center lg:-order-1">
-            <div className="flex items-center justify-center text-white gap-10 sm:gap-24 lg:gap-4">
-              <img width={35} src={fb} alt="social media icon" loading="lazy" />
+          <div className="mt-13 lg:mt-0 flex flex-col gap-15 items-center lg:-order-1 lg:items-start">
+            <div className="flex items-center justify-center text-white gap-10 sm:gap-24 lg:gap-6 ">
               <img
-                width={35}
+                className="w-9 lg:w-7"
+                src={fb}
+                alt="social media icon"
+                loading="lazy"
+              />
+              <img
+                className="w-9 lg:w-7"
                 src={youtube}
                 alt="social media icon"
                 loading="lazy"
               />
               <img
-                width={35}
+                className="w-9 lg:w-7"
                 src={twitter}
                 alt="social media icon"
                 loading="lazy"
               />
               <img
-                width={35}
+                className="w-9 lg:w-7"
                 src={pinterest}
                 alt="social media icon"
                 loading="lazy"
               />
               <img
-                width={35}
+                className="w-9 lg:w-7"
                 src={insta}
                 alt="social media icon"
                 loading="lazy"

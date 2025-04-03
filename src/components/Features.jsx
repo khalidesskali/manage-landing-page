@@ -29,12 +29,13 @@ const Features = () => {
         <div className="relative mb-10 lg:mb-0">
           <img
             src={mobilebg}
-            className="absolute -top-[170%] left-[66%] md:-top-[286%] -z-10 select-none"
+            className="absolute -top-[170%] left-[66%] md:-top-[286%]
+            lg:top-[60%] lg:-left-1/2 lg:z-10 -z-10 select-none 2xl:max-w-[700px] 2xl:-left-[90%]"
             loading="lazy"
           />
           <h2
             className="text-center font-bold leading-[1.3] mx-auto text-primary-dark-blue
-          z-100 text-3xl mb-10 max-w-72 md:max-w-[450px] md:text-4xl lg:text-5xl lg:max-w-[600px]
+          z-100 text-3xl mb-10 max-w-72 md:max-w-[450px] md:text-4xl xl:text-5xl xl:max-w-[600px]
           lg:text-start"
           >
             What's different about Manage?
@@ -55,18 +56,18 @@ const Features = () => {
                 <div className="relative mb-3">
                   <span
                     className="absolute left-0 top-1/2 -translate-y-1/2 size-10 flex items-center justify-center
-            bg-primary-red py-2 px-10 font-medium rounded-full text-very-light-gray lg:-left-28"
+                  bg-primary-red py-2 px-6 lg:px-10 font-medium rounded-full text-very-light-gray lg:-left-28"
                   >
                     0{feature.id}
                   </span>
                   <span
                     className="bg-very-pale-red lg:bg-transparent py-2 pr-2 pl-15 lg:pl-0 text-primary-dark-blue
-                font-bold rounded-tl-[50px] rounded-bl-md block w-full tracking-tight lg:tracking-normal"
+                font-bold rounded-tl-[50px] rounded-bl-md block w-full tracking-tight lg:tracking-normal "
                   >
                     {feature.title}
                   </span>
                 </div>
-                <p className="text-darkgrayish-blue leading-[1.8] text-sm lg:max-w-[400px]">
+                <p className="text-darkgrayish-blue leading-[1.8] text-sm lg:max-w-[400px] lg:text-base">
                   {feature.description}
                 </p>
               </div>

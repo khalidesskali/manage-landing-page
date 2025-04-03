@@ -39,36 +39,44 @@ const Testimonials = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 5000);
+      if (window.screen.width > 1025) {
+        setCurrentIndex((prevIndex) => (prevIndex === 1 ? 0 : prevIndex + 1));
+      } else if (window.screen.width > 1280) {
+        setCurrentIndex((prevIndex) => (prevIndex === 2 ? 0 : prevIndex + 1));
+      } else {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+      }
+    }, 3000);
 
     return () => clearInterval(interval);
-  }, [testimonials.length]);
+  }, [currentIndex]);
 
   return (
-    <div className="relative container mx-auto px-4 mt-20 bg-white overflow-hidden w-full">
-      <h2 className="text-center font-bold leading-[1.3] mx-auto text-primary-dark-blue text-3xl mb-8 max-w-72">
+    <div className="relative mx-auto px-4 mt-20 bg-white overflow-hidden w-full">
+      <h2
+        className="text-center font-bold leading-[1.3] mx-auto text-primary-dark-blue text-3xl 
+      lg:text-5xl lg:max-w-[500px] mb-12 max-w-72"
+      >
         What they've said
       </h2>
-      <div className="relative overflow-hidden w-full max-w-lg mx-auto">
+      <div className="relative overflow-hidden lg:overflow-visible w-full max-w-lg mx-auto lg:mx-0 lg:max-w-1/2 xl:max-w-1/3">
         <div
-          className="mt-20 flex  transition-transform duration-500 ease-in-out"
+          className="mt-20 flex relative lg:gap-5 transition-transform duration-500 ease-in-out z-100"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="w-full flex-shrink-0 flex justify-center"
+              className="w-full flex-shrink-0 flex justify-center z-100"
             >
-              <div className="relative rounded-md p-6 bg-very-light-gray mb-10 w-[380px]">
+              <div className="relative rounded-md p-6 bg-very-light-gray mb-10 max-w-[380px] md:max-w-[500px]">
                 <img
                   src={testimonial.avatar}
                   alt="avatar image"
-                  className="absolute -top-[50px] left-1/2 -translate-x-1/2 rounded-full"
-                  width={80}
+                  className="absolute -top-[50px] left-1/2 -translate-x-1/2 rounded-full w-20 lg:w-24"
                 />
                 <div className="flex flex-col items-center">
-                  <h3 className="text-primary-dark-blue my-5 text-lg font-bold">
+                  <h3 className="text-primary-dark-blue my-5 lg:mt-12 text-lg font-bold">
                     {testimonial.name}
                   </h3>
                   <p className="text-center leading-[1.7] text-darkgrayish-blue">
@@ -79,10 +87,10 @@ const Testimonials = () => {
             </div>
           ))}
         </div>
-        <ul className="flex items-center justify-center gap-2 mb-10">
-          {testimonials.map((testimonial, index) => {
+        <ul className="lg:hidden flex items-center justify-center gap-2 mb-10">
+          {testimonials.map((_, index) => {
             return (
-              <li key={testimonial.id}>
+              <li key={index}>
                 <div
                   className={`
                     ${currentIndex === index && "bg-primary-red"}
@@ -92,13 +100,13 @@ const Testimonials = () => {
             );
           })}
         </ul>
-        <button
-          className="block mx-auto mb-5 py-3 px-10 bg-primary-red text-white rounded-full
-          shadow-primary-red cursor-pointer text-sm shadow-md"
-        >
-          Get Started
-        </button>
       </div>
+      <button
+        className="block mx-auto mb-5 py-3 px-10 bg-primary-red text-white rounded-full
+          shadow-primary-red cursor-pointer text-sm shadow-md"
+      >
+        Get Started
+      </button>
     </div>
   );
 };

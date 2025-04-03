@@ -23,7 +23,7 @@ const Hero = () => {
           lg:-order-1 lg:text-start lg:items-start "
         >
           <h1
-            className="font-bold text-4xl md:max-w-[600px] lg:text-5xl 2xl:text-6xl max-w-96 text-primary-dark-blue 
+            className="font-bold text-4xl md:max-w-[600px] lg:text-5xl 2xl:text-6xl max-w-96 text-primary-dark-blue
             lg:max-w-[550px] lg:leading-[1.2]"
           >
             Bring everyone together to build better products.

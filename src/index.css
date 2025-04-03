@@ -18,3 +18,12 @@ body {
 nav a {
   @apply font-medium text-primary-dark-blue;
 }
+.laptop-links > a {
+  @apply text-primary-dark-blue duration-300 hover:text-darkgrayish-blue;
+}
+.footer-links div > a {
+  @apply text-white duration-300 hover:text-primary-red cursor-pointer;
+}
+.footer-icons {
+  @apply cursor-pointer;
+}

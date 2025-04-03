@@ -41,26 +41,17 @@ const Header = () => {
       <div className="container mx-auto px-4 hidden lg:block">
         <div className="flex items-center justify-between h-full">
           <img src={logo} alt="Logo" loading="lazy" width={120} />
-          <nav className="flex items-center gap-10 text-sm">
-            <a href="#" className="text-primary-dark-blue font-medium">
-              Pricing
-            </a>
-            <a href="#" className="text-primary-dark-blue ">
-              Product
-            </a>
-            <a href="#" className="text-primary-dark-blue ">
-              About Us
-            </a>
-            <a href="#" className="text-primary-dark-blue ">
-              Carrers
-            </a>
-            <a href="#" className="text-primary-dark-blue ">
-              Community
-            </a>
+          <nav className="laptop-links flex items-center gap-10 text-sm">
+            <a href="#">Pricing</a>
+            <a href="#">Product</a>
+            <a href="#">About Us</a>
+            <a href="#">Carrers</a>
+            <a href="#">Community</a>
           </nav>
           <button
             className="block py-3 px-8 bg-primary-red text-white rounded-full 
-            cursor-pointer text-sm shadow-lg shadow-very-pale-red"
+            cursor-pointer text-sm shadow-lg shadow-primary-red/60 duration-300
+            hover:bg-primary-red/70 "
           >
             Get Started
           </button>

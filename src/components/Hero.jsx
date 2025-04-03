@@ -34,7 +34,8 @@ const Hero = () => {
           </p>
           <button
             className="block mb-5 py-3 px-10 bg-primary-red text-white rounded-full
-          shadow-primary-red cursor-pointer text-sm shadow-md"
+          cursor-pointer text-sm shadow-md shadow-primary-red/60 duration-300
+            hover:bg-primary-red/70 "
           >
             Get Started
           </button>

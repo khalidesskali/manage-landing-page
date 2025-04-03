@@ -80,6 +80,7 @@ const Features = () => {
                 : { opacity: 0, scale: 0.8 }
             }
             transition={{ duration: 0.8, delay: 0.3 }}
+            alt="Bg image"
           />
           <motion.h2
             className="text-center font-bold leading-[1.3] mx-auto text-primary-dark-blue
